@@ -29,6 +29,7 @@ Partial Class Form1
         Me.PC1_PORT = New System.Windows.Forms.TextBox()
         Me.PC2_IP = New System.Windows.Forms.TextBox()
         Me.PC2_PORT = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'PC1_Rest_Button
@@ -95,11 +96,20 @@ Partial Class Form1
         Me.PC2_PORT.TabIndex = 6
         Me.PC2_PORT.Text = "15101"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(48, 258)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(317, 22)
+        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.Text = "15101"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(422, 311)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PC2_PORT)
         Me.Controls.Add(Me.PC2_IP)
         Me.Controls.Add(Me.PC1_PORT)
@@ -121,4 +131,5 @@ Partial Class Form1
     Friend WithEvents PC1_PORT As TextBox
     Friend WithEvents PC2_IP As TextBox
     Friend WithEvents PC2_PORT As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class

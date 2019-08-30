@@ -14,24 +14,26 @@ Public Class Form1
 
         PC1_Rest_Button.Text = "主機一"
 
-        WriteToPLC("PC1=RESTART", tcpcc)
+        TextBox1.Text = WriteToPLC("PC1=RESTART", tcpcc)
 
-
+        tcpcc.Close()
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles PC2_Rest_Button.Click
-        Dim tcpcc As New TcpClient(PC1_IP.Text, CInt(PC1_PORT.Text))
+        Dim tcpcc As New TcpClient(PC2_IP.Text, CInt(PC2_PORT.Text))
 
         Do Until tcpcc.Connected
 
-            PC1_Rest_Button.Text = "等...."
+            PC2_Rest_Button.Text = "等...."
 
         Loop
 
-        PC1_Rest_Button.Text = "主機二"
+        PC2_Rest_Button.Text = "主機二"
 
-        WriteToPLC("PC2=RESTART", tcpcc)
+        TextBox1.Text = WriteToPLC("PC2=RESTART", tcpcc)
+        tcpcc.Close()
+
     End Sub
 
 
